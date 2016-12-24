@@ -3,14 +3,14 @@
 <head>
 <title>Steve Nakevski - Junior Rubi on Rails Developer</title>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <header id="main_navigation" class="clearfix">
-	<a href="index.html" class="name">Steve Nakevski</a>
+	<%= link_to "Steve Nakevski", root_path, class: "name" %>
 	<nav>
 	<%= link_to "Articles", posts_path %>
 		<a href="#">Projects</a>
@@ -20,5 +20,13 @@
 
 <%= yield %>
 
+<footer id="main_footer">
+	<p class="copyright"> &copy; 2016 Steve Nakevski</p>
+	<nav>
+		<a href="https://www.facebook.com/steve.nakevski" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="https://github.com/stenak" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/in/steve-nakevski-39976876" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+	</nav>
+</footer>
 </body>
 </html>
