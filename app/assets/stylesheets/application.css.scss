@@ -1,4 +1,4 @@
-/* @import 'normalize'; */
+@import 'normalize';
 
 
 $dark: #424652;
@@ -96,7 +96,8 @@ p, ul, ol {
 	}
 }
 
-/* @import 'welcome'; */
+@import 'welcome';
+@import 'posts_projects';
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
