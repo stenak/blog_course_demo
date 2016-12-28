@@ -1,0 +1,27 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+		<header>
+			<p class="date"><%= @project.created_at.strftime('%A, %B %d') %></p>
+			<h1><%= @project.title %></h1>
+			<hr>
+		</header>
+		<div id="content">
+			<%= markdown @project.description %>
+
+			<div class="button_wrapper">
+				<a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>
+			</div>
+		</div>
+
+		<hr>
+		<div id="share_box">
+			<p>Share <%= @project.title %></p>
+			<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @project.title %> by @stenak9 - &url=<%= url_for([@project, {only_path: false}]) %>','_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@project, {only_path: false}]) %>','_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@project, {only_path: false}]) %>','_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
+		</div>
+		
+		<hr>
+
+		<%= render 'disqus' %>
+
+</div>
